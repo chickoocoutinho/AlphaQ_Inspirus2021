@@ -21,7 +21,7 @@ const Classroom = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.gapi.client?.classroom.courses
+    window.gapi?.client?.classroom?.courses
       .list({
         pageSize: 10,
       })
@@ -38,7 +38,7 @@ const Classroom = () => {
   useEffect(() => {
     if (
       typeof courseResources[selectedCourse.value] === "undefined" &&
-      window.gapi.client
+      window?.gapi?.client
     )
       window.gapi.client.classroom.courses.courseWorkMaterials
         .list({
