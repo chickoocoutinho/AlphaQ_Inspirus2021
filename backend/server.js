@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+const userRoutes = require("./routes/userRoutes");
 const app = express();
 require('dotenv').config();   
 
@@ -12,5 +13,7 @@ const port = process.env.PORT || 5000;
 const uri = process.env.ATLAS_URI;
 
 mongoose.connect(uri);
+
+app.use("/user", userRoutes);
 
 app.listen(port,()=>console.log("Serving running"));

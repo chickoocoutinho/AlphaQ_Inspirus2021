@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
+import GoogleLogin from './component/GoogleLoginComponents';
 
 import Landing from "./Pages/Landing"
 import Login from "./Pages/Login";
@@ -10,6 +11,7 @@ import Editor from "./Pages/Editor"
 
 function App() {
   return (
+    <>
       <Router>
         {/* <nav>
           NAV Here
@@ -35,6 +37,10 @@ function App() {
           Footer Here
         </footer> */}
     </Router>
+    <div className="App">
+      <GoogleLogin/>
+    </div>
+    </>
   );
 }
 
