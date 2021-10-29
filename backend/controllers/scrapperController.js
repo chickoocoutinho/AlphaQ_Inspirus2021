@@ -14,15 +14,15 @@ module.exports.scrap = async (req,res) => {
             let projects, books, papers;
             let promises= [axios.get(`${projectAPI}=${query}`).then(res => {
                 projects = res.data.items.slice(0,size)
-                projects = projects.map(({name,html_url}) => {return {name,html_url}});
+                projects = projects.map(({name,html_url,description}) => {return {name,html_url,description}});
             }),
             axios.get(`${bookAPI}=${query}`).then(res=>{
                 books = res.data.items.slice(0,size)
-                books = books.map(({title,link}) => {return {title,link}})
+                books = books.map(({title,link,snippet}) => {return {title,link,description:snippet}})
             }),
             axios.get(`${paperAPI}=${query}`).then(res=>{
                 papers = res.data.items.slice(0,size)
-                papers = papers.map(({title,link}) => {return {title,link}})
+                papers = papers.map(({title,link,snippet}) => {return {title,link,description:snippet}})
             })]
 
             Promise.all(promises)
