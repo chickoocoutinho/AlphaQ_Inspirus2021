@@ -6,6 +6,8 @@ import Courses from "./Pages/Courses";
 import Lectures from "./Pages/Lectures";
 import Editor from "./Pages/Editor";
 
+import NavBar from "./component/NavBar"
+
 function App() {
   return (
     <>
@@ -13,6 +15,7 @@ function App() {
         {/* <nav>
           NAV Here
         </nav> */}
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <Landing />
