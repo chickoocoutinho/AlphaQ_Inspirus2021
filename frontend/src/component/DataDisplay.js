@@ -1,6 +1,8 @@
 import IframeDisplay from "./IframeDisplay";
 import { Menu } from "antd";
 
+import MindMap from "./MindMap";
+
 const DataDisplay = ({ selectedMenu, setSelectedMenu }) => {
   const handleClick = (e) => {
     console.log(e.key);
@@ -10,7 +12,7 @@ const DataDisplay = ({ selectedMenu, setSelectedMenu }) => {
   const display = () => {
     switch (selectedMenu) {
       case "Mind_Maps":
-        return <h1>Mind Map WILL GO HERE</h1>;
+        return <MindMap />;
       case "Flow_Charts":
         return <h1>FLOW CHART WILL GO HERE</h1>;
       default:
