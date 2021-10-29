@@ -10,7 +10,7 @@ const QuillEditor = () => {
   return (
     <>
       <h1>Quil Editor</h1>
-      <ReactQuill theme="snow" value={value} onChange={setValue} style={{ height: '48.5vh'}} />
+      <ReactQuill theme="snow" value={value} onChange={setValue} style={{ height: '52.9vh'}} />
       
     </>
   );

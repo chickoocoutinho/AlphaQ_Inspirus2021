@@ -18,6 +18,24 @@ function Editor() {
       <Col span={12}><QuillEditor /></Col>
       <Col span={12}><ScrapUI /></Col>
     </Row>
+    <div style={{ marginTop: '1rem'}}>
+    <Menu onClick={handleClick}  mode="horizontal">
+        <Menu.Item key="mail" >
+          Mind Maps
+        </Menu.Item>
+        <Menu.Item key="mail" >
+          Flowcharts
+        </Menu.Item>
+        <Menu.Item key="mail" >
+          Render
+        </Menu.Item>
+        <Menu.Item key="mail" >
+          PDF 
+        </Menu.Item>
+      </Menu>
+    </div>
+    <iframe id="theFrame" src="https://zh.1lib.in/book/2079252/21276b" width='100%' height='600' >
+    </iframe>
     </div>
   );
 }

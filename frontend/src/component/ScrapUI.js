@@ -1,5 +1,5 @@
 import React from 'react'
-import { Collapse } from 'antd';
+import { Collapse, Button } from 'antd';
 
 const { Panel } = Collapse;
 
@@ -38,16 +38,25 @@ function ScrapUI() {
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                     <Panel header={OSPTitle} key="2">
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                     <Panel header={OSPTitle} key="3">
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                 </Collapse>
                 </Panel>
@@ -57,16 +66,25 @@ function ScrapUI() {
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                     <Panel header={OSPTitle} key="2">
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                     <Panel header={OSPTitle} key="3">
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                 </Collapse>
                 </Panel>
@@ -76,16 +94,25 @@ function ScrapUI() {
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                     <Panel header={OSPTitle} key="2">
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                     <Panel header={OSPTitle} key="3">
                         <p>Repository: {OSPRepo}</p>
                         <p>Description: {OSPDesc}</p>
                         <p>Link: <a href={OSPLink}>{OSPLink}</a></p>
+                        <Button type="primary" size="large">
+                        Render
+                        </Button>
                     </Panel>
                 </Collapse>
                 </Panel>
