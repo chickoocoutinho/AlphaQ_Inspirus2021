@@ -2,19 +2,22 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ScapperSchema = Schema({
-    lecture_id: {
+    query: {
         type: String,
     },
-    user_id:{
-        type:String
+    books: {
+        type: Array
     },
-    html: {
-        type: String,
+    projects: {
+        type: Array
     },
+    papers: {
+        type: Array
+    }
 },
     { timestamps: true }
 );
 
-const Scapper = mongoose.model('User', ScapperSchema);
+const Scapper = mongoose.model('Scrapper', ScapperSchema);
 
 module.exports = Scapper;

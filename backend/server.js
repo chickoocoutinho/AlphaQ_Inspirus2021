@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const userRoutes = require("./routes/userRoutes");
+const scrapperRoutes = require("./routes/scrapperRoutes");
+
 const app = express();
 require('dotenv').config();   
 
@@ -15,5 +17,6 @@ const uri = process.env.ATLAS_URI;
 mongoose.connect(uri);
 
 app.use("/user", userRoutes);
+app.use("/scrapper",scrapperRoutes )
 
 app.listen(port,()=>console.log("Serving running"));
