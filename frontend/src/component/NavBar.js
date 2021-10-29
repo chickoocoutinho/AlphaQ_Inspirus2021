@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import LeftMenu from './LeftMenu'
-import RightMenu from './RightMenu'
-import { Drawer, Button } from 'antd';
+import { Button } from 'antd';
 import { Row, Col } from 'antd';
 import "./NavBar.css"
 import MainIcon from '../assets/Classroom_Buddy.svg';
