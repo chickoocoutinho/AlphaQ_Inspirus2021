@@ -2,9 +2,10 @@ import React from 'react'
 
 function Landing() {
     return (
-        <div>
-            <h1>Landing</h1>
-        </div>
+        <>
+            <h1>Hello</h1>
+
+        </>
     )
 }
 
