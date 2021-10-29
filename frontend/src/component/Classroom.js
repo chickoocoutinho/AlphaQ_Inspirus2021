@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { Card, Button } from "antd";
 import Select from "react-select";
+
+import { updateCourseNames, setCourseResources } from "../store/courseData";
 
 const Classroom = () => {
   const [courses, setCourses] = useState([]);
@@ -11,12 +14,9 @@ const Classroom = () => {
     label: "",
   });
   const history = useHistory();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(
-      window.gapi,
-      window.gapi.auth2.getAuthInstance().isSignedIn.get()
-    );
     window.gapi.client?.classroom.courses
       .list({
         pageSize: 10,
@@ -27,8 +27,9 @@ const Classroom = () => {
           value: response.result.courses[0].id,
           label: response.result.courses[0].name,
         });
+        dispatch(updateCourseNames({ data: response.result.courses }));
       });
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (
@@ -44,15 +45,21 @@ const Classroom = () => {
             ...prevState,
             [selectedCourse.value]: response.result.courseWorkMaterial,
           }));
+          dispatch(
+            setCourseResources({
+              data: response.result.courseWorkMaterial,
+              courseId: selectedCourse.value,
+            })
+          );
         });
-  }, [selectedCourse, courseResources]);
+  }, [selectedCourse, courseResources, dispatch]);
 
   const handleSelectChange = ({ value, label }) => {
     setSelectedCourse({ value, label });
   };
 
-  const redirectLecture = (id) => {
-    history.push("/courses/" + id);
+  const redirectLecture = (id, title) => {
+    history.push("/courses/" + title + "/" + id + "/" + selectedCourse.value);
   };
 
   return (
@@ -73,7 +80,7 @@ const Classroom = () => {
             <Card key={element.id}>
               <Button
                 type="primary"
-                onClick={() => redirectLecture(element.id)}
+                onClick={() => redirectLecture(element.id, element.title)}
               >
                 GO TO LECTURE
               </Button>

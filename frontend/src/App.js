@@ -26,7 +26,7 @@ function App() {
           <Route path="/course-name/lectures">
             <Lectures />
           </Route>
-          <Route exact path="/courses/:lectureId">
+          <Route exact path="/courses/:title/:lectureId/:courseId">
             <Editor />
           </Route>
         </Switch>
