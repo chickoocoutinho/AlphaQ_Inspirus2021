@@ -9,6 +9,7 @@
   "author": "ALPHAQ",
   "license": "MIT",
   "dependencies": {
+    "algoliasearch": "^4.11.0",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
