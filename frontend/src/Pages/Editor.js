@@ -41,36 +41,43 @@ function Editor() {
   };
 
   return (
-    <div style={{ marginLeft: "3rem", marginRight: "3rem", marginTop: "5rem" }}>
-      <Row
-        justify="center"
-        align="top"
-        gutter={[32, 16]}
-        style={{ minHeight: "100vh" }}
+    <>
+      <div
+        style={{
+          padding: "0 3rem",
+          marginTop: "2rem",
+        }}
       >
-        <Col span={12}>
-          <QuillEditor
-            lectureId={lectureId}
-            courseId={courseId}
-            searchData={null}
-            title={title}
-          />
-        </Col>
-        <Col span={12}>
-          <ScrapUI
-            books={lectureBooks}
-            projects={lectureProjects}
-            papers={lecturePapers}
-            references={lectureMaterial}
-            displayIframe={displayIframe}
-          />
-        </Col>
-      </Row>
+        <Row
+          justify="center"
+          align="top"
+          gutter={[32, 16]}
+          style={{ minHeight: "100vh" }}
+        >
+          <Col span={12}>
+            <QuillEditor
+              lectureId={lectureId}
+              courseId={courseId}
+              searchData={null}
+              title={title}
+            />
+          </Col>
+          <Col span={12}>
+            <ScrapUI
+              books={lectureBooks}
+              projects={lectureProjects}
+              papers={lecturePapers}
+              references={lectureMaterial}
+              displayIframe={displayIframe}
+            />
+          </Col>
+        </Row>
+      </div>
       <DataDisplay
         selectedMenu={selectedMenu}
         setSelectedMenu={setSelectedMenu}
       />
-    </div>
+    </>
   );
 }
 
