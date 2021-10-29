@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Row, Col } from 'antd';
+import {withRouter} from 'react-router-dom'
 import "./NavBar.css"
 import MainIcon from '../assets/Classroom_Buddy.svg';
+import GoogleLoginComponents from './GoogleLoginComponents';
 class Navbar extends Component {
   state = {
     current: 'mail',
-    visible: false
+    visible: false,
   }
   showDrawer = () => {
     this.setState({
@@ -18,6 +20,15 @@ onClose = () => {
       visible: false,
     });
   };
+  logout = () => {
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("user_details");
+    this.props.history.push("/");
+  }
+  
+  onClick = (link) => {
+    this.props.history.push(link)
+  }
 render() {
     return (
         <nav className="menuBar">
@@ -32,16 +43,16 @@ render() {
             </Row>
           </div>
           <div className="buttons">
-          <Row >
-            <Col span={8}><Button size="large">
+          <Row justify="end">
+            {localStorage.getItem("user_details")&&<Col span={8}><Button size="large" onClick={() => this.onClick("/courses")}>
               Courses
-            </Button></Col>
-            <Col span={8}><Button size="large">
+            </Button></Col>}
+            {localStorage.getItem("user_details")&&<Col span={8}><Button size="large" onClick={()=>this.onClick("/notes")}>
               All Notes
-            </Button></Col>
-            <Col span={8}><Button type="primary" size="large">
-             Login
-           </Button></Col>
+            </Button></Col>}
+            <Col span={8}>
+              <GoogleLoginComponents/>
+           </Col>
           </Row>
           </div>
          
@@ -49,4 +60,4 @@ render() {
     );
   }
 }
-export default Navbar;
+export default withRouter(Navbar);
