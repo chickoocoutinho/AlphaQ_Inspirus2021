@@ -15,7 +15,7 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
         .get(
           baseUrl +
             "algolia?user_id=" +
-            localStorage.getItem("user_details") +
+            localStorage.getItem("user_id") +
             "&lecture_id=" +
             lectureId
         )
@@ -26,9 +26,10 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
   }, [searchData, lectureId]);
 
   const handleSave = () => {
+    console.log("sdfbhsd")
     axios
       .post(baseUrl + "algolia", {
-        user_id: localStorage.getItem("user_details"),
+        user_id: localStorage.getItem("user_id"),
         lecture_id: lectureId,
         lecture_name: title,
         course_id: courseId,

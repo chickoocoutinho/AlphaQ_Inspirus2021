@@ -39,7 +39,9 @@ const GoogleLoginComponents = () => {
       localStorage.setItem("user_details", params);
       axios
         .post(`${baseUrl}user/signup`, params)
-        .then(() => history.push("/courses"))
+        .then((res) => {
+          localStorage.setItem("user_id",res.data.user_id);
+          history.push("/courses")})
         .catch((err) => console.log(err));
     }
   };
