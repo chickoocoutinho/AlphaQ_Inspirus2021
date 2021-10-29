@@ -1,4 +1,4 @@
-import QuillEditor from "../components/QuillEditor";
+import QuillEditor from "../component/QuillEditor";
 
 function Editor() {
   return (
