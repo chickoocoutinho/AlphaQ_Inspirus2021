@@ -4,6 +4,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import baseUrl from "../baseURL";
+import { Button } from "antd";
 
 const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
   const [value, setValue] = useState("");
@@ -39,9 +40,17 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <h1>Quil Editor</h1>
-        <button onClick={handleSave}>SAVE</button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h1>Notes Editor</h1>
+        <Button type="primary" onClick={handleSave}>
+          SAVE
+        </Button>
       </div>
       <ReactQuill
         theme="snow"
