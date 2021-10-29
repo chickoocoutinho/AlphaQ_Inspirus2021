@@ -1,6 +1,6 @@
 import React from "react";
 
-import Classroom from "../components/Classroom";
+import Classroom from "../component/Classroom";
 
 function Courses() {
   return (
