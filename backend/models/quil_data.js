@@ -5,9 +5,18 @@ const quilSchema = Schema({
     lecture_id: {
         type: String,
     },
+    course_id: {
+        type: String
+    },
     html: {
         type: String,
     },
+    user_id: {
+        type: String
+    },
+    lecture_name:{
+        type: String
+    }
 },
     { timestamps: true }
 );
