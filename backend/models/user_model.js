@@ -6,7 +6,7 @@ const emailValidate = (email) => {
     return re.test(email);
 }
 
-const parentSchema = Schema({
+const userSchema = Schema({
     name: {
         type: String,
         required: [true, 'Please enter your name'],
@@ -30,6 +30,6 @@ const parentSchema = Schema({
     { timestamps: true }
 );
 
-const User = mongoose.model('User', parentSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

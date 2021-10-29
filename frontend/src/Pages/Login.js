@@ -1,10 +1,9 @@
 import React from 'react'
+import GoogleLogin from '../component/GoogleLoginComponents';
 
 function Login() {
     return (
-        <div>
-            <h1>Login</h1>
-        </div>
+        <GoogleLogin/>
     )
 }
 
