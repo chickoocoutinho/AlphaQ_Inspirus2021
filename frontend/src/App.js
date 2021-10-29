@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import Courses from "./Pages/Courses";
 import Lectures from "./Pages/Lectures";
 import Editor from "./Pages/Editor";
+import Notes from "./Pages/Notes";
 
 import NavBar from "./component/NavBar"
 
@@ -29,8 +30,11 @@ function App() {
           <Route path="/course-name/lectures">
             <Lectures />
           </Route>
-          <Route exact path="/courses/:lectureId">
+          <Route exact path="/courses/:title/:lectureId/:courseId">
             <Editor />
+          </Route>
+          <Route exact path="/notes">
+            <Notes/>
           </Route>
         </Switch>
         {/* <footer>
