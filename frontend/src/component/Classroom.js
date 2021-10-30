@@ -9,6 +9,7 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 
 import { updateCourseNames, setCourseResources } from "../store/courseData";
 
+var myImgLinks = ["https://i.ibb.co/Ry9V0tR/anamnesis33-pj-X8-VSNo2-Ts-unsplash.jpg", "https://i.ibb.co/RjD1S2Z/faraz-arshad-hj-Ydr-Ujo7-JY-unsplash.jpg", "https://i.ibb.co/pZvz41G/ospan-ali-V-77-Fxf-Ge-QU-unsplash.jpg","https://i.ibb.co/hmSWWrp/patrick-fore-M1-Vo1-MFMv-XI-unsplash.jpg","https://i.ibb.co/xSyVptB/raimond-klavins-Afm-By-Tk-HK-Q-unsplash.jpg","https://i.ibb.co/PM2Xxp9/raimond-klavins-Ql6-Jh-Gdb-Qg0-unsplash.jpg","https://i.ibb.co/RQnm2j1/ransel-yoho-arkg-Tj3-XJq-A-unsplash.jpg","https://i.ibb.co/bvvvx8h/s-o-c-i-a-l-c-u-t-g-REi-9t-I5-Mg-unsplash.jpg" ]; 
 const { Meta } = Card;
 const Classroom = () => {
   const [courses, setCourses] = useState([]);
@@ -84,10 +85,11 @@ const Classroom = () => {
       <Row gutter={[24, 16]}>
                 {Array.isArray(courseResources[selectedCourse.value]) ? (
           courseResources[selectedCourse.value].map((element) => (
+            
             <Col span={8}>
             <Card key={element.id} hoverable
             style={{ width: 240, marginBottom: "2rem" }}
-            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+            cover={<img alt="example" src={myImgLinks[Math.floor(Math.random() * myImgLinks.length)]} />}
             onClick={() => redirectLecture(element.id, element.title)}>
               
               {/* <Button
