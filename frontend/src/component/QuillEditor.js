@@ -21,7 +21,8 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
             lectureId
         )
         .then((response) => {
-          if (response.data.exists) setValue(response.data.note);
+          if (response.data.exits) 
+          setValue(response.data.note)
         });
     }
   }, [searchData, lectureId]);
