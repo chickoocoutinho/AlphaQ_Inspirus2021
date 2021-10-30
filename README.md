@@ -100,18 +100,12 @@ To get a local copy up and running follow these simple example steps:
 The working parts are as follows:
 1. The landing page:
  <br/><br/>
-  <img src="https://i.ibb.co/0GdpBpm/screenshot-localhost-3000-2021-10-30-07-28-52.png" alt="screenshot-localhost-3000-2021-10-30-07-32-21"/><br><br>
-2. An about page which features our problem statements and the solutions we've implemented
-  <img src="https://github.com/Deb77/BabyAndMe/blob/main/screenshots/Screenshot3.jpg"/><br><br>
-3. A crowdsourced page to help women locate comfortable and cosy places to breastfeed their babies
-  <img src="https://github.com/Deb77/BabyAndMe/blob/main/screenshots/Screenshot2.jpg"/><br><br>
-4. A page which lists down Lactation Management Centers with an aim to create a globalised database, 
-   which displays infomation like number of bottles available in the center and other necessary details.
-   Users can also send requests to hospitals inorder to get screened to be eligible to donate milk.
-   <img src="https://github.com/Deb77/BabyAndMe/blob/main/screenshots/Screenshot4.jpg"/><br><br>
-5. An admin panel which enables the Lactation Management Center to update the number of milk bottles available, 
-  and enables the admin user to approve screening requests.
-  <img src="https://github.com/Deb77/BabyAndMe/blob/main/screenshots/Screenshot5.jpg"/><br><br>
+  <img src="https://i.ibb.co/DRSPGPz/screenshot-localhost-3000-2021-10-30-07-28-52.png" alt="screenshot-localhost-3000-2021-10-30-07-32-21"/><br><br>
+2. A page to display courses
+  <img src="https://i.ibb.co/yFY6WXB/screenshot-localhost-3000-2021-10-30-07-30-47.png"/><br><br>
+3. A page built with an in house editor
+  <img src="https://i.ibb.co/BwNvmBV/screenshot-localhost-3000-2021-10-30-07-31-25.png"/><br><br>
+  <img src="https://i.ibb.co/0h4VsG6/screenshot-localhost-3000-2021-10-30-07-32-21.png"/><br><br> 
   
 
 ## Contributing
