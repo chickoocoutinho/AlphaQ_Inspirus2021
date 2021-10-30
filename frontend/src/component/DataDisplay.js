@@ -24,7 +24,7 @@ const DataDisplay = ({ selectedMenu, setSelectedMenu }) => {
   };
 
   return (
-    <div style={{ minHeight: 500,paddingTop:20, margin:"0 3rem 0 1.75rem" }}>
+    <div style={{ minHeight: 500,paddingTop:20, margin:"0 3rem 0 3rem" }}>
       <Divider />
       <div
         style={{
