@@ -51,7 +51,7 @@ const courseData = createSlice({
   },
   extraReducers: {
     [getData.fulfilled]: (state, { payload }) => {
-      state.courseNames = payload.courseNames;
+      state.courseNames = payload.courses;
       state.courseResources = payload.data.reduce(
         (prevValue, currentValue) =>
           (prevValue = {

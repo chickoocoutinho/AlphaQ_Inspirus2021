@@ -32,6 +32,7 @@ const Classroom = () => {
   const courseData = useSelector((state) => state.courseData.courseResources);
 
   useEffect(() => {
+    console.log(courseNames, courseData);
     if (courseNames.length === 0) dispatch(getData());
     else {
       setCourses(courseNames);
