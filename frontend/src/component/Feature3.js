@@ -4,12 +4,17 @@ const Feature1 = () => {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "50% 50%",
+      
         padding: "5rem",
         backgroundColor: "#f9fafc",
       }}
     >
+      <div style={{
+          display: "grid",
+          gridTemplateColumns: "50% 50%",
+          maxWidth: 1200,
+          margin: "auto", 
+      }}>
       <div
         style={{
           position: "relative",
@@ -45,6 +50,7 @@ const Feature1 = () => {
         loop
         src="https://assets3.lottiefiles.com/packages/lf20_ftlw1wbu.json"
       ></Player>
+      </div>
     </div>
   );
 };

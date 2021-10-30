@@ -6,7 +6,9 @@ const Feature1 = () => {
       style={{
         display: "grid",
         gridTemplateColumns: "50% 50%",
-        padding: "0 5rem",
+       padding: "0 5rem",
+        maxWidth: 1500,
+        margin: "auto", 
       }}
     >
       <Player
