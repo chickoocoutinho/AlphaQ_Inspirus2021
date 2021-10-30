@@ -52,7 +52,6 @@ function Editor() {
           justify="center"
           align="top"
           gutter={[32, 16]}
-          style={{ minHeight: "100vh" }}
         >
           <Col span={12}>
             <QuillEditor

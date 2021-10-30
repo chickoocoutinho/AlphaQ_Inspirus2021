@@ -58,7 +58,7 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
         theme="snow"
         value={value}
         onChange={setValue}
-        style={{ height: "calc(100vh - 100px)" }}
+        style={{ height: "calc(100vh - 425px)" }}
       />
     </>
   );
