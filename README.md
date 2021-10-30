@@ -63,37 +63,21 @@ To get a local copy up and running follow these simple example steps:
 
 ### Installation
 
-1. Get API keys for GoogleMapsAPI, SendgridAPI, MONGODB
+1. Get API keys, credentials as mentioned in the env_example files
 2. Clone the repo
    ```sh
-   git clone https://github.com/Deb77/BabyAndMe.git
+   git clone https://github.com/InspirusDBCE/AlphaQ_Inspirus2021.git
    ```
-3. Make a .env file in the backend which has the same keys as the .env example file
-   Make a file "MAP_KEY.js" in this directory client/src/Components/Utils add and export the follwing variable:
+4. Installing and running the frontend 
    ```sh
-   export const GOOGLE_API_KEY= '';
-   ```
-
-5. Installing and running the frontend 
-   ```sh
-   cd client
+   cd frontend
    npm install
    npm start
    ```
-4. Installing and running the backend
+5. Installing and running the backend
    ```sh
    cd backend
-   virtualenv venv
-
-   for Windows:
-   source venv/Scripts/activate
-
-   for Linux:
-   source venv/bin/activate
-
-   pip install -r requirements.txt
-
-   python app.py
+   nodemon server.js
    ```
 
 ## Usage
