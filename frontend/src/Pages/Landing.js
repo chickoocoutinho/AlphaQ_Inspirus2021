@@ -1,10 +1,12 @@
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Row, Col } from "antd";
+import NewLanding from "../component/NewLanding";
 
 function Landing() {
   return (
-    <div
+    <div style={{ fontFamily: "Bree Serif, serif" }}>
+      {/* <div
       style={{
         position: "relative",
         maxWidth: "80%",
@@ -164,6 +166,8 @@ function Landing() {
           </Col>
         </Row>
       </div>
+    </div> */}
+      <NewLanding />
     </div>
   );
 }
