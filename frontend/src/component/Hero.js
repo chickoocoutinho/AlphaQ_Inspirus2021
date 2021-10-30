@@ -18,7 +18,7 @@ const Hero = () => {
         <div
           style={{
             position: "relative",
-            top: "20%",
+            top: "30%",
             height: "fit-content",
           }}
         >
@@ -28,7 +28,7 @@ const Hero = () => {
               fontSize: 100,
               fontFamily: "inherit",
               marginBottom: 0,
-              top: "40%",
+              top: "60%",
             }}
           >
             ClassBuddy
