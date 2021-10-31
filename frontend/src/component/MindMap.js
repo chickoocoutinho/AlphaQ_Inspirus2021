@@ -3,7 +3,7 @@ const MindMap = () => {
     <iframe
       title="resource_material"
       id="theFrame"
-      src="http://localhost:4200/app"
+      src="https://mindmapp.cedoor.dev/app"
       width="100%"
       height="600"
     />
