@@ -5,6 +5,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import baseUrl from "../baseURL";
 import { Button } from "antd";
+import jsPDF from "jspdf";
 
 const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
   const [value, setValue] = useState("");
@@ -21,14 +22,13 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
             lectureId
         )
         .then((response) => {
-          if (response.data.exits) 
-          setValue(response.data.note)
+          if (response.data.exits) setValue(response.data.note);
         });
     }
   }, [searchData, lectureId]);
 
   const handleSave = () => {
-    console.log("sdfbhsd")
+    console.log("sdfbhsd");
     axios
       .post(baseUrl + "algolia", {
         user_id: localStorage.getItem("user_id"),
@@ -38,6 +38,21 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
         html: value,
       })
       .then((response) => console.log(response));
+  };
+
+  const handlePDFDownload = () => {
+    var doc = new jsPDF();
+    doc.setFontSize(10);
+    doc.html(value, {
+      callback: function (doc) {
+        doc.setFontSize(10).save();
+      },
+      width: 180,
+      windowWidth: 180,
+      autoPaging: true,
+      x: 10,
+      y: 20,
+    });
   };
 
   return (
@@ -50,9 +65,16 @@ const QuillEditor = ({ title, lectureId, courseId, searchData }) => {
         }}
       >
         <h1>Notes Editor</h1>
-        <Button type="primary" onClick={handleSave}>
-          SAVE
-        </Button>
+        <div>
+          <Button
+            type="primary"
+            onClick={handleSave}
+            style={{ marginRight: "1rem" }}
+          >
+            Save
+          </Button>
+          <Button onClick={handlePDFDownload}>Download</Button>
+        </div>
       </div>
       <ReactQuill
         theme="snow"
