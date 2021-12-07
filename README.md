@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/InspirusDBCE/AlphaQ_Inspirus2021/blob/main/frontend/src/assets/Classroom_Buddy.svg" alt="Logo" width="80" height="80">
+  <img src="https://github.com/InspirusDBCE/AlphaQ_Inspirus2021/blob/main/frontend/src/assets/Classroom_Buddy.svg" style="background-color:#000"  alt="Logo" width="80" height="80">
   <h3 align="center">ClassBuddy</h3>
 
   <p align="center">
@@ -32,15 +32,16 @@
 </details>
 
 ## About The Project
+ Built for inspiration Hackathon 2021, ClassBuddy is an Advance Note Taking app which connects to your Google Classroom and fetches data of all the classes you have enrolled in along with lecture details and study Material. Our Text editor and web scraper let you create notes for lectures with the help of reference material in the form of open-source projects, book recommendations, research papers, and Google Classroom Notes. Notes created by users can be saved and later queried using our notes search feature powered by Algolia. 
+ <hr/>
+ 
 ### Key Features
-#### Feature 1
-Get all the classes you’ve registered for just by signing into our platform using Google
-#### Feature 2
-The text editor encompasses features like bullet points, varied text formatting options and style enhancement features. 
-#### Feature 3
-The AI based search checks for all notes across the platform which are  closely related to the search query. 
-#### Feature 4
-Mind Maps to jot down your thoughts on the go
+#### Seemless Integration with Google Classroom
+Get all the classes you’ve registered for in Google Classroom  without any hassle.
+#### Feature Rich Notes Taker & Web Scraper 
+Feature Rich text edittor with lecture related web suggestions which let you take notes on the go. Get all Notes shared in Google Classroom along with research papers, github projects and book recommendations from our web scrapper.
+#### Notes Search
+Search though all the notes you created using our custom search powered by Algolia.
 
 ### Built With
 
@@ -80,7 +81,7 @@ To get a local copy up and running follow these simple example steps:
    nodemon server.js
    ```
 
-## Usage
+## Screenshots
 The working parts are as follows:
 1. The landing page:
  <br/><br/>
